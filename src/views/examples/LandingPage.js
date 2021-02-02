@@ -73,7 +73,7 @@ function LandingPage() {
         }}>
 
           <Container>
-            <h1 className="title">Politika</h1>
+            <h1 className="title">PolitikAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAa</h1>
             <Row>
               <Col md="4">
                 <div className="firstDiv">
