@@ -25,7 +25,7 @@ function LandingPageHeader({test}) {
     }
   });
   //variables
-  let styleobj = {fontSize: 45, width:1000, marginLeft:-90 }
+  let styleobj = {fontSize: 46, width:1000, marginLeft:-90 }
   //body
   return (
     <>
@@ -39,8 +39,8 @@ function LandingPageHeader({test}) {
         <div className="filter" />
         <div className="content-center">
           <Container>
-          <br/><br/><br/><br/><br/>
-            <div className="title-brand">
+          
+            <div className="title-brand" style={{paddingTop:140}}>
               <h3 className="presentation-title" style={styleobj}>
               Domovina Dijaspora Demokratski Dijalog</h3>
                <br/><br/><br/>
@@ -51,8 +51,6 @@ function LandingPageHeader({test}) {
                 <img alt="..." src={require("assets/img/fog-low.png")} />
               </div>
             </div>
-            <h2 className="presentation-subtitle text-center">
-            </h2>
             <br/><br/><br/><br/><br/><br/><br/><br/>
             <div className="motto text-center">
             <div class="bounce">
