@@ -25,7 +25,7 @@ function LandingPageHeader({test}) {
     }
   });
   //variables
-  let styleobj = {fontSize: 72, width:1000, marginLeft:-90 }
+  let styleobj = {fontSize: 100, width:1000, marginLeft:-90 }
   //body
   return (
     <>
