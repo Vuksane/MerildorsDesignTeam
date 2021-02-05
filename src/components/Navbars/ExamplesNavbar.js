@@ -104,42 +104,32 @@ function ExamplesNavbar() {
         >
           <Nav navbar>
             <NavItem>
-              <NavLink href="http://www.politika.rs/"
-              target="_blank">
+              <NavLink to="/Politika" tag={Link}>
                 <i className="nc-icon nc-layout-11" /> POLITIKA
               </NavLink>
             </NavItem>
             <NavItem>
-              <NavLink
-                href="https://www.novosti.rs/kultura/vesti"
-                target="_blank"
-              >
-                <i className="nc-icon nc-book-bookmark" /> KULTURA I DRUSTVO
+            <NavLink to="/KulturaIDrustvo" tag={Link}>
+                <i className="nc-icon nc-layout-11" /> KULTURA I DRUSTVO
               </NavLink>
             </NavItem>
             <NavItem>
               <NavLink
-                href="http://merildorsdesign.com/"
-                target="_blank"
-              >
-                <i className="nc-icon nc-book-bookmark" /> EKONOMIJA
-              </NavLink>
+               to="/Ekonomija" tag={Link}>
+               <i className="nc-icon nc-layout-11" /> EKONOMIJA
+             </NavLink>
             </NavItem>
             <NavItem>
-              <NavLink
-                href="http://merildorsdesign.com/"
-                target="_blank"
-              >
-                <i className="nc-icon nc-book-bookmark" /> KOLUMNE I INTERVJUI
-              </NavLink>
+            <NavLink
+               to="/kolumneIIntervjui" tag={Link}>
+               <i className="nc-icon nc-layout-11" /> KOLUMNE I INTERVJUI
+             </NavLink>
             </NavItem>
             <NavItem>
-              <NavLink
-                href="http://merildorsdesign.com/"
-                target="_blank"
-              >
-                <i className="nc-icon nc-book-bookmark" /> VIJESTI IZ DIJASPORE
-              </NavLink>
+            <NavLink
+               to="/VijestiIzDijaspore" tag={Link}>
+               <i className="nc-icon nc-layout-11" /> VIJESTI IZ DIJASPORE
+             </NavLink>
             </NavItem>
           </Nav>
         </Collapse>

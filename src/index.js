@@ -27,11 +27,11 @@ import "assets/scss/paper-kit.scss";
 // pages
 
 import LandingPage from "views/examples/LandingPage.js";
-import LoginForm from './LoginForm';
-import SignUp from './SignUp';
-import IndexPage from './IndexPage'
-import Articles from './Articles'
-import ArticleDetails from './ArticleDetails'
+import KulturaIDrustvo from './KulturaIDrustvo';
+import Ekonomija from './Ekonomija'
+import KolumneIIntervjui from './KolumneIIntervjui'
+import VijestiIzDijaspore from './VijestiIzDijaspore'
+import Politika from "./Politika";
 
 // others
 ReactDOM.render(
@@ -45,29 +45,29 @@ ReactDOM.render(
         render={props => <LandingPage {...props} />}
       />
       <Route
-        path="/login"
-        render={props => <LoginForm {...props} />}
+        path="/KulturaIDrustvo"
+        render={props => <KulturaIDrustvo {...props} />}
 
       />
 
       <Route
-        path="/sign-up"
-        render={props => <SignUp {...props} />}
+        path="/Politika"
+        render={props => <Politika {...props} />}
       />
 
       <Route
-        path="/index"
-        render={props => <IndexPage {...props} />}
+        path="/Ekonomija"
+        render={props => <Ekonomija {...props} />}
       />
 
       <Route
-        path="/articles/:category/:city"
-        render={props => <Articles {...props} />}
+        path="/KolumneIIntervjui"
+        render={props => <KolumneIIntervjui {...props} />}
       />
 
       <Route
-        path="/articles/:category/:city/:id"
-        render={props => <ArticleDetails {...props} />}
+        path="/VijestiIzDijaspore"
+        render={props => <VijestiIzDijaspore {...props} />}
       />
 
 
