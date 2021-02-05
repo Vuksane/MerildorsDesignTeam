@@ -7,7 +7,6 @@ import { Button, Container } from "reactstrap";
 import Particles from 'react-particles-js';
 
 
-
 function LandingPageHeader({test}) {
   let pageHeader = React.createRef();
 //function navbar
