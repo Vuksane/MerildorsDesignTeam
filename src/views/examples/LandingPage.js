@@ -55,7 +55,7 @@ function LandingPage() {
           border: '10px solid #CDCDCD',
         }}>
 
-          <Container style={{paddingTop:100}}>
+          <Container style={{paddingTop:70}}>
             <div className="title-brand">
               <h1 className="presentation-title2">Politika</h1>
             </div>
