@@ -51,16 +51,18 @@ function LandingPage() {
           backgroundImage: "url(" + require("assets/img/plavidvoraccetinje.jpg") + ")",
           backgroundSize: 'cover',
           overflow: 'hidden',
+          margin: 50,
+          border: '10px solid #CDCDCD',
         }}>
 
-          <Container>
+          <Container style={{paddingTop:100}}>
             <div className="title-brand">
               <h1 className="presentation-title2">Politika</h1>
             </div>
             <Row>
               <Col md="4">
-                <div className="firstDiv">
-                  <Card className="card-profile card-plain">
+                <div className="firstDiv" >
+                  <Card className="card-profile card-plain" style={{paddingLeft:25, paddingRight: 25}}>
                     <div className="card-avatar" >
                       <a href="#pablo" onClick={e => e.preventDefault()}>
                         <img
@@ -77,7 +79,7 @@ function LandingPage() {
                           <CardTitle tag="h4">Aleksandar Vucic</CardTitle>
                           <h6 className="card-category">Predsjedik Srbije</h6>
                           <br />
-                          <p className="card-description text-center">
+                          <p className="card-description text-justify">
                             Danas je Aleksandar Vucic izasao medju narod i obratio se sa informacijom o statusu u drzavi.
                             Oporezivanje javnih preduzeca kao i freelance kompanija ce se nastaviti oporezivati do daljenjeg.
                             Iako su se mnogi protivili toj odluci, hteli ili ne morali su da prihvate tu odluku. |
@@ -119,7 +121,7 @@ function LandingPage() {
               </Col>
               <Col md="4">
                 <div className="firstDiv">
-                  <Card className="card-profile card-plain">
+                  <Card className="card-profile card-plain" style={{paddingLeft:25, paddingRight: 25}}>
                     <div className="card-avatar">
                       <a href="#pablo" onClick={e => e.preventDefault()}>
                         <img
@@ -139,7 +141,7 @@ function LandingPage() {
                         </div>
                       </a>
 
-                      <p className="card-description text-center">
+                      <p className="card-description text-justify">
                         Milo Đukanović biće predsednik Demokratske partije socijalista (DPS)  i u narednom periodu, odlučeno je na vanrednom Kongresu partije održanom danas u Podgorici.
                         Đukanović je bio jedini kandidat za predsednika te političke partije.
                         Ivan Vuković, Jevto Eraković, Sanja Damjanović i Abaz Dizdarević biće potpredsednici DPS-a.
@@ -177,8 +179,8 @@ function LandingPage() {
 
               </Col>
               <Col md="4">
-                <div className="firstDiv">
-                  <Card className="card-profile card-plain">
+                <div className="firstDiv" >
+                  <Card className="card-profile card-plain" style={{paddingLeft:25, paddingRight: 25}}>
                     <div className="card-avatar">
                       <a href="#pablo" onClick={e => e.preventDefault()}>
                         <img
@@ -197,7 +199,7 @@ function LandingPage() {
                           <br />
                         </div>
                       </a>
-                      <p className="card-description text-center">
+                      <p className="card-description text-justify">
                         Predsjednik Saveza nezavisnih socijaldemokrata (SNSD) i predsjedavajući Predsjedništva Bosne i Hercegovine (BiH) Milorad Dodik zatražio je od predsjednika Stranke demokratske akcije (SDA) Bakira Izetbegovića da se izvini Srbima zbog izjave date u emisiji "Dnevnik D" Federalne televiziije (FTV).
                         Izetbegović je gostujući u ovoj emisiji, 21. januara i komentirajući zašto Milorad Dodik govori o secesiji Republike Srpske (RS) naveo kako smatra da Dodik želi da "ostane upamćen kao neko ko je sačuvao duh toga.
                     </p>
@@ -239,9 +241,11 @@ function LandingPage() {
           backgroundImage: "url(" + require("assets/img/muzej.jpg") + ")",
           backgroundSize: 'cover',
           overflow: 'hidden',
+          margin: 50,
+          border: '10px solid #CDCDCD',
         }}>
 
-          <Container>
+          <Container style={{paddingTop:100}}>
             <h1 className="title">Kultura i drustvo</h1>
             <Row>
               <Col md="4">
@@ -425,8 +429,10 @@ function LandingPage() {
           backgroundImage: "url(" + require("assets/img/manastir.jpg") + ")",
           backgroundSize: 'cover',
           overflow: 'hidden',
+          margin: 50,
+          border: '10px solid #CDCDCD',
         }}>
-          <Container>
+          <Container style={{paddingTop:100}}>
             <div className="title-brand">
               <h1 className="presentation-title2">Ekonomija</h1>
             </div>
@@ -612,9 +618,11 @@ function LandingPage() {
           backgroundImage: "url(" + require("assets/img/plavidvoraccetinje.jpg") + ")",
           backgroundSize: 'cover',
           overflow: 'hidden',
+          margin: 50,
+          border: '10px solid #CDCDCD',
         }}>
 
-          <Container>
+          <Container style={{paddingTop:100}}>
             <div className="title-brand">
               <h1 className="presentation-title2">Kolumne i Intervjui</h1>
             </div>
@@ -800,9 +808,11 @@ function LandingPage() {
           backgroundImage: "url(" + require("assets/img/plavidvoraccetinje.jpg") + ")",
           backgroundSize: 'cover',
           overflow: 'hidden',
+          margin: 50,
+          border: '10px solid #CDCDCD',
         }}>
 
-          <Container>
+          <Container style={{paddingTop:100}}>
             <div className="title-brand">
               <h1 className="presentation-title2">Vijesti iz dijaspore</h1>
             </div>
