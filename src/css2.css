@@ -33,6 +33,14 @@ html, body {
   -webkit-border-radius: 30px;
 }
 
+#maxHeight{
+  background-repeat: no-repeat;
+  background-attachment: apsolute;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+}
+
 .paddingArticlesCards{
   padding: 50px;
 }

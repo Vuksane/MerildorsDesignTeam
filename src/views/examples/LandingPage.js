@@ -1,6 +1,6 @@
 
 import React, { Component, useRef, useEffect } from 'react';
-
+import { Link } from "react-router-dom";
 // reactstrap components
 import {
   Button,
@@ -8,11 +8,7 @@ import {
   CardBody,
   CardFooter,
   CardTitle,
-  Form,
-  Input,
-  InputGroupAddon,
-  InputGroupText,
-  InputGroup,
+  NavLink,
   Container,
   Row,
   Col
@@ -55,26 +51,27 @@ function LandingPage() {
           border: '10px solid #CDCDCD',
         }}>
 
-          <Container style={{paddingTop:70}}>
+          <Container style={{ paddingTop: 70 }}>
+           
             <div className="title-brand">
-              <h1 className="presentation-title2">Politika</h1>
-            </div>
-            <Row>
-              <Col md="4">
-                <div className="firstDiv" >
-                  <Card className="card-profile card-plain" style={{paddingLeft:25, paddingRight: 25}}>
-                    <div className="card-avatar" >
-                      <a href="#pablo" onClick={e => e.preventDefault()}>
-                        <img
-                          alt="..."
-                          src={require("assets/img/faces/clem-onojeghuo-2.jpg")}
-                        />
-                      </a>
-                    </div>
-
-                    <CardBody >
-                      <div>
+                <h1 className="presentation-title2">Politika</h1>
+              </div>
+              <Row>
+                <Col md="4">
+                  <div className="firstDiv" >
+                    <Card className="card-profile card-plain" style={{ paddingLeft: 25, paddingRight: 25 }}>
+                      <div className="card-avatar" >
                         <a href="#pablo" onClick={e => e.preventDefault()}>
+                          <img
+                            alt="..."
+                            src={require("assets/img/faces/clem-onojeghuo-2.jpg")}
+                          />
+                        </a>
+                      </div>
+                      <NavLink to="/Other" tag={Link}>
+                      <CardBody >
+                        <div>
+
                           <br />
                           <CardTitle tag="h4">Aleksandar Vucic</CardTitle>
                           <h6 className="card-category">Predsjedik Srbije</h6>
@@ -86,9 +83,9 @@ function LandingPage() {
                             Porez za freelancere iznosice 50% od ukupne sume. Sto se ostalih preduzeca tice iznosice 28%.
                             Do daljnjeg ce ova odluka biti na snazi.
                         </p>
-                        </a>
                       </div>
                     </CardBody>
+                    </NavLink>
 
                     <CardFooter className="text-center">
                       <Button
@@ -121,7 +118,7 @@ function LandingPage() {
               </Col>
               <Col md="4">
                 <div className="firstDiv">
-                  <Card className="card-profile card-plain" style={{paddingLeft:25, paddingRight: 25}}>
+                  <Card className="card-profile card-plain" style={{ paddingLeft: 25, paddingRight: 25 }}>
                     <div className="card-avatar">
                       <a href="#pablo" onClick={e => e.preventDefault()}>
                         <img
@@ -180,7 +177,7 @@ function LandingPage() {
               </Col>
               <Col md="4">
                 <div className="firstDiv" >
-                  <Card className="card-profile card-plain" style={{paddingLeft:25, paddingRight: 25}}>
+                  <Card className="card-profile card-plain" style={{ paddingLeft: 25, paddingRight: 25 }}>
                     <div className="card-avatar">
                       <a href="#pablo" onClick={e => e.preventDefault()}>
                         <img
@@ -245,7 +242,7 @@ function LandingPage() {
           border: '10px solid #CDCDCD',
         }}>
 
-          <Container style={{paddingTop:100}}>
+          <Container style={{ paddingTop: 100 }}>
             <h1 className="title">Kultura i drustvo</h1>
             <Row>
               <Col md="4">
@@ -432,7 +429,7 @@ function LandingPage() {
           margin: 50,
           border: '10px solid #CDCDCD',
         }}>
-          <Container style={{paddingTop:100}}>
+          <Container style={{ paddingTop: 100 }}>
             <div className="title-brand">
               <h1 className="presentation-title2">Ekonomija</h1>
             </div>
@@ -622,7 +619,7 @@ function LandingPage() {
           border: '10px solid #CDCDCD',
         }}>
 
-          <Container style={{paddingTop:100}}>
+          <Container style={{ paddingTop: 100 }}>
             <div className="title-brand">
               <h1 className="presentation-title2">Kolumne i Intervjui</h1>
             </div>
@@ -812,7 +809,7 @@ function LandingPage() {
           border: '10px solid #CDCDCD',
         }}>
 
-          <Container style={{paddingTop:100}}>
+          <Container style={{ paddingTop: 100 }}>
             <div className="title-brand">
               <h1 className="presentation-title2">Vijesti iz dijaspore</h1>
             </div>
@@ -994,7 +991,7 @@ function LandingPage() {
             </Row>
           </Container>
         </div>
-        
+
       </div>
       <DemoFooter />
     </>
