@@ -10,6 +10,8 @@ import {
   CardFooter,
   CardTitle,
   Form,
+  NavItem,
+  NavLink,
   Input,
   InputGroupAddon,
   InputGroupText,
@@ -39,14 +41,14 @@ export default function Politika(props) {
   // Funkcija modala koji se prikazuje kao alert nakon sto korisnik klikne da posalje komentar
   function MyVerticallyCenteredModal(props) {
     return (
-     
-        <Modal
-          {...props}
-          size="lg"
-          aria-labelledby="contained-modal-title-vcenter"
-          centered
-        > <div className="section landing-section sectionLandingSection" style={{
-        backgroundImage: "url(" + require("assets/img/laptop.jpg") + ")"
+
+      <Modal
+        {...props}
+        size="lg"
+        aria-labelledby="contained-modal-title-vcenter"
+        centered
+      > <div className="section landing-section sectionLandingSection" id="maxHeight" style={{
+        backgroundImage: "url(" + require("assets/img/bridge5.jpg") + ")"
       }} >
           <Modal.Header closeButton>
           </Modal.Header>
@@ -54,7 +56,7 @@ export default function Politika(props) {
             <Container>
               <Row>
                 <Col className="ml-auto mr-auto" md="8">
-                  <h2 id="scroll" className="text-center" style={{ color: "white" }}>Ostavite komentar</h2><br></br>
+                  <h2 id="scroll" className="text-center" style={{ color: "white" }}>Keep in touch?</h2><br></br>
                   <Form className="contact-form blurred_glass_quick_message2 blurred_glass_quick_message" >
                     <Row>
                       <Col md="6">
@@ -89,13 +91,11 @@ export default function Politika(props) {
                     <Row>
                       <Col className="ml-auto mr-auto" md="4">
                         <br></br>
-                        <Button className="btn-round mr-1" style={{ color: "black" }}
-                          color="neutral"
-                          target="_blank"
-                          outline
+                        <Button className="btn-round mr-1"
                         >
-                          <i className="fa fa-play" />
-                      Send Message
+                            <NavLink to="/" tag={Link}>
+                            </NavLink>
+                            Posaljite poruku
                       </Button>
                       </Col>
                     </Row>
@@ -105,7 +105,7 @@ export default function Politika(props) {
             </Container>
 
           </Modal.Body></div>
-        </Modal>
+      </Modal>
     );
   }
   const [modalShow, setModalShow] = React.useState(false);

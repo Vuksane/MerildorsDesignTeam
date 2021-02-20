@@ -10,19 +10,31 @@ import Particles from 'react-particles-js';
 function LandingPageHeader({test}) {
   let pageHeader = React.createRef();
 //function navbar
-  React.useEffect(() => {
-    if (window.innerWidth < 991) {
-      const updateScroll = () => {
-        let windowScrollTop = window.pageYOffset / 3;
-        pageHeader.current.style.transform =
-          "translate3d(0," + windowScrollTop + "px,0)";
-      };
-      window.addEventListener("scroll", updateScroll);
-      return function cleanup() {
-        window.removeEventListener("scroll", updateScroll);
-      };
+const [navbarColor, setNavbarColor] = React.useState("navbar-transparent");
+const [navbarCollapse, setNavbarCollapse] = React.useState(false);
+
+
+React.useEffect(() => {
+  const updateNavbarColor = () => {
+    if (
+      document.documentElement.scrollTop > 299 ||
+      document.body.scrollTop > 299
+    ) {
+      setNavbarColor("");
+    } else if (
+      document.documentElement.scrollTop < 300 ||
+      document.body.scrollTop < 300
+    ) {
+      setNavbarColor("navbar-transparent");
     }
-  });
+  };
+
+  window.addEventListener("scroll", updateNavbarColor);
+
+  return function cleanup() {
+    window.removeEventListener("scroll", updateNavbarColor);
+  };
+});
   //variables
   let styleobj = {fontSize:46, width:1000, marginLeft:-90 }
   //body

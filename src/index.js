@@ -1,4 +1,4 @@
-    /*!
+/*!
 
 =========================================================
 * Paper Kit React - v1.0.0
@@ -31,7 +31,8 @@ import KulturaIDrustvo from './KulturaIDrustvo';
 import Ekonomija from './Ekonomija'
 import KolumneIIntervjui from './KolumneIIntervjui'
 import VijestiIzDijaspore from './VijestiIzDijaspore'
-import Politika from "./Politika";
+import Politika from './Politika';
+import Other from './Other';
 
 // others
 ReactDOM.render(
@@ -69,7 +70,10 @@ ReactDOM.render(
         path="/VijestiIzDijaspore"
         render={props => <VijestiIzDijaspore {...props} />}
       />
-
+      <Route
+        path="/Other"
+        render={props => <Other {...props} />}
+      />
 
       <Redirect to="/" />
     </Switch>
