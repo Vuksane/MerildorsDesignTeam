@@ -127,7 +127,7 @@ function LandingPage() {
                         />
                       </a>
                     </div>
-
+                  
                     <CardBody>
                       <br />
                       <a href="#pablo" onClick={e => e.preventDefault()}>
