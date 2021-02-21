@@ -74,12 +74,11 @@ border-image: linear-gradient(90deg, rgba(255,255,255, 0.9), transparent, transp
 border-image-slice: 1; }
 
 
-.blurred_glass_quick_message{ width: 30%; margin: 0 auto; position: relative; background-color: rgba(0,0,0,0.2); padding: 10px;
-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.7); animation-duration: 0.5s; animation-fill-mode: both; animation-delay: 1s; color: white;}
+.blurred_glass_quick_message{ width: 30%; margin: 0 auto; position: relative; background-color: rgb(0, 0, 0); padding: 20px;
+ animation-duration: 0.5s; animation-fill-mode: both; animation-delay: 1s; color: white;}
 
 .blurred_glass_quick_message2{ width: 100%; margin: 0 auto; position: relative; border: 3px solid transparent;
-border-image: linear-gradient(90deg, rgba(255,255,255, 0.9), transparent, transparent, transparent, transparent, transparent, transparent, rgba(255,255,255, 0.9));
-border-image-slice: 1; }
+ }
 
 
 .blurred_glass_login{ width: 60%; margin: 0 auto; position: relative; background-color: rgba(0,0,0,0.2); padding: 15px;
