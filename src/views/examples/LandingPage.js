@@ -245,35 +245,35 @@ function LandingPage() {
           <Container style={{ paddingTop: 100 }}>
             <h1 className="title">Kultura i drustvo</h1>
             <Row>
-              <Col md="4">
-                <div className="firstDiv">
-                  <Card className="card-profile card-plain">
-                    <div className="card-avatar" >
-                      <a href="#pablo" onClick={e => e.preventDefault()}>
-                        <img
-                          alt="..."
-                          src={require("assets/img/faces/clem-onojeghuo-2.jpg")}
-                        />
-                      </a>
-                    </div>
-
-                    <CardBody >
-                      <div>
+                <Col md="4">
+                  <div className="firstDiv" >
+                    <Card className="card-profile card-plain" style={{ paddingLeft: 25, paddingRight: 25 }}>
+                      <div className="card-avatar" >
                         <a href="#pablo" onClick={e => e.preventDefault()}>
+                          <img
+                            alt="..."
+                            src={require("assets/img/faces/clem-onojeghuo-2.jpg")}
+                          />
+                        </a>
+                      </div>
+                      <NavLink to="/Other" tag={Link}>
+                      <CardBody >
+                        <div>
+
                           <br />
                           <CardTitle tag="h4">Aleksandar Vucic</CardTitle>
                           <h6 className="card-category">Predsjedik Srbije</h6>
                           <br />
-                          <p className="card-description text-center">
+                          <p className="card-description text-justify">
                             Danas je Aleksandar Vucic izasao medju narod i obratio se sa informacijom o statusu u drzavi.
                             Oporezivanje javnih preduzeca kao i freelance kompanija ce se nastaviti oporezivati do daljenjeg.
                             Iako su se mnogi protivili toj odluci, hteli ili ne morali su da prihvate tu odluku. |
                             Porez za freelancere iznosice 50% od ukupne sume. Sto se ostalih preduzeca tice iznosice 28%.
                             Do daljnjeg ce ova odluka biti na snazi.
                         </p>
-                        </a>
                       </div>
                     </CardBody>
+                    </NavLink>
 
                     <CardFooter className="text-center">
                       <Button
@@ -306,7 +306,7 @@ function LandingPage() {
               </Col>
               <Col md="4">
                 <div className="firstDiv">
-                  <Card className="card-profile card-plain">
+                  <Card className="card-profile card-plain" style={{ paddingLeft: 25, paddingRight: 25 }}>
                     <div className="card-avatar">
                       <a href="#pablo" onClick={e => e.preventDefault()}>
                         <img
@@ -326,7 +326,7 @@ function LandingPage() {
                         </div>
                       </a>
 
-                      <p className="card-description text-center">
+                      <p className="card-description text-justify">
                         Milo Đukanović biće predsednik Demokratske partije socijalista (DPS)  i u narednom periodu, odlučeno je na vanrednom Kongresu partije održanom danas u Podgorici.
                         Đukanović je bio jedini kandidat za predsednika te političke partije.
                         Ivan Vuković, Jevto Eraković, Sanja Damjanović i Abaz Dizdarević biće potpredsednici DPS-a.
@@ -364,8 +364,8 @@ function LandingPage() {
 
               </Col>
               <Col md="4">
-                <div className="firstDiv">
-                  <Card className="card-profile card-plain">
+                <div className="firstDiv" >
+                  <Card className="card-profile card-plain" style={{ paddingLeft: 25, paddingRight: 25 }}>
                     <div className="card-avatar">
                       <a href="#pablo" onClick={e => e.preventDefault()}>
                         <img
@@ -384,7 +384,7 @@ function LandingPage() {
                           <br />
                         </div>
                       </a>
-                      <p className="card-description text-center">
+                      <p className="card-description text-justify">
                         Predsjednik Saveza nezavisnih socijaldemokrata (SNSD) i predsjedavajući Predsjedništva Bosne i Hercegovine (BiH) Milorad Dodik zatražio je od predsjednika Stranke demokratske akcije (SDA) Bakira Izetbegovića da se izvini Srbima zbog izjave date u emisiji "Dnevnik D" Federalne televiziije (FTV).
                         Izetbegović je gostujući u ovoj emisiji, 21. januara i komentirajući zašto Milorad Dodik govori o secesiji Republike Srpske (RS) naveo kako smatra da Dodik želi da "ostane upamćen kao neko ko je sačuvao duh toga.
                     </p>
@@ -434,35 +434,35 @@ function LandingPage() {
               <h1 className="presentation-title2">Ekonomija</h1>
             </div>
             <Row>
-              <Col md="4">
-                <div className="firstDiv">
-                  <Card className="card-profile card-plain">
-                    <div className="card-avatar" >
-                      <a href="#pablo" onClick={e => e.preventDefault()}>
-                        <img
-                          alt="..."
-                          src={require("assets/img/faces/clem-onojeghuo-2.jpg")}
-                        />
-                      </a>
-                    </div>
-
-                    <CardBody >
-                      <div>
+                <Col md="4">
+                  <div className="firstDiv" >
+                    <Card className="card-profile card-plain" style={{ paddingLeft: 25, paddingRight: 25 }}>
+                      <div className="card-avatar" >
                         <a href="#pablo" onClick={e => e.preventDefault()}>
+                          <img
+                            alt="..."
+                            src={require("assets/img/faces/clem-onojeghuo-2.jpg")}
+                          />
+                        </a>
+                      </div>
+                      <NavLink to="/Other" tag={Link}>
+                      <CardBody >
+                        <div>
+
                           <br />
                           <CardTitle tag="h4">Aleksandar Vucic</CardTitle>
                           <h6 className="card-category">Predsjedik Srbije</h6>
                           <br />
-                          <p className="card-description text-center">
+                          <p className="card-description text-justify">
                             Danas je Aleksandar Vucic izasao medju narod i obratio se sa informacijom o statusu u drzavi.
                             Oporezivanje javnih preduzeca kao i freelance kompanija ce se nastaviti oporezivati do daljenjeg.
                             Iako su se mnogi protivili toj odluci, hteli ili ne morali su da prihvate tu odluku. |
                             Porez za freelancere iznosice 50% od ukupne sume. Sto se ostalih preduzeca tice iznosice 28%.
                             Do daljnjeg ce ova odluka biti na snazi.
                         </p>
-                        </a>
                       </div>
                     </CardBody>
+                    </NavLink>
 
                     <CardFooter className="text-center">
                       <Button
@@ -495,7 +495,7 @@ function LandingPage() {
               </Col>
               <Col md="4">
                 <div className="firstDiv">
-                  <Card className="card-profile card-plain">
+                  <Card className="card-profile card-plain" style={{ paddingLeft: 25, paddingRight: 25 }}>
                     <div className="card-avatar">
                       <a href="#pablo" onClick={e => e.preventDefault()}>
                         <img
@@ -515,7 +515,7 @@ function LandingPage() {
                         </div>
                       </a>
 
-                      <p className="card-description text-center">
+                      <p className="card-description text-justify">
                         Milo Đukanović biće predsednik Demokratske partije socijalista (DPS)  i u narednom periodu, odlučeno je na vanrednom Kongresu partije održanom danas u Podgorici.
                         Đukanović je bio jedini kandidat za predsednika te političke partije.
                         Ivan Vuković, Jevto Eraković, Sanja Damjanović i Abaz Dizdarević biće potpredsednici DPS-a.
@@ -553,8 +553,8 @@ function LandingPage() {
 
               </Col>
               <Col md="4">
-                <div className="firstDiv">
-                  <Card className="card-profile card-plain">
+                <div className="firstDiv" >
+                  <Card className="card-profile card-plain" style={{ paddingLeft: 25, paddingRight: 25 }}>
                     <div className="card-avatar">
                       <a href="#pablo" onClick={e => e.preventDefault()}>
                         <img
@@ -573,7 +573,7 @@ function LandingPage() {
                           <br />
                         </div>
                       </a>
-                      <p className="card-description text-center">
+                      <p className="card-description text-justify">
                         Predsjednik Saveza nezavisnih socijaldemokrata (SNSD) i predsjedavajući Predsjedništva Bosne i Hercegovine (BiH) Milorad Dodik zatražio je od predsjednika Stranke demokratske akcije (SDA) Bakira Izetbegovića da se izvini Srbima zbog izjave date u emisiji "Dnevnik D" Federalne televiziije (FTV).
                         Izetbegović je gostujući u ovoj emisiji, 21. januara i komentirajući zašto Milorad Dodik govori o secesiji Republike Srpske (RS) naveo kako smatra da Dodik želi da "ostane upamćen kao neko ko je sačuvao duh toga.
                     </p>
@@ -624,35 +624,35 @@ function LandingPage() {
               <h1 className="presentation-title2">Kolumne i Intervjui</h1>
             </div>
             <Row>
-              <Col md="4">
-                <div className="firstDiv">
-                  <Card className="card-profile card-plain">
-                    <div className="card-avatar" >
-                      <a href="#pablo" onClick={e => e.preventDefault()}>
-                        <img
-                          alt="..."
-                          src={require("assets/img/faces/clem-onojeghuo-2.jpg")}
-                        />
-                      </a>
-                    </div>
-
-                    <CardBody >
-                      <div>
+                <Col md="4">
+                  <div className="firstDiv" >
+                    <Card className="card-profile card-plain" style={{ paddingLeft: 25, paddingRight: 25 }}>
+                      <div className="card-avatar" >
                         <a href="#pablo" onClick={e => e.preventDefault()}>
+                          <img
+                            alt="..."
+                            src={require("assets/img/faces/clem-onojeghuo-2.jpg")}
+                          />
+                        </a>
+                      </div>
+                      <NavLink to="/Other" tag={Link}>
+                      <CardBody >
+                        <div>
+
                           <br />
                           <CardTitle tag="h4">Aleksandar Vucic</CardTitle>
                           <h6 className="card-category">Predsjedik Srbije</h6>
                           <br />
-                          <p className="card-description text-center">
+                          <p className="card-description text-justify">
                             Danas je Aleksandar Vucic izasao medju narod i obratio se sa informacijom o statusu u drzavi.
                             Oporezivanje javnih preduzeca kao i freelance kompanija ce se nastaviti oporezivati do daljenjeg.
                             Iako su se mnogi protivili toj odluci, hteli ili ne morali su da prihvate tu odluku. |
                             Porez za freelancere iznosice 50% od ukupne sume. Sto se ostalih preduzeca tice iznosice 28%.
                             Do daljnjeg ce ova odluka biti na snazi.
                         </p>
-                        </a>
                       </div>
                     </CardBody>
+                    </NavLink>
 
                     <CardFooter className="text-center">
                       <Button
@@ -685,7 +685,7 @@ function LandingPage() {
               </Col>
               <Col md="4">
                 <div className="firstDiv">
-                  <Card className="card-profile card-plain">
+                  <Card className="card-profile card-plain" style={{ paddingLeft: 25, paddingRight: 25 }}>
                     <div className="card-avatar">
                       <a href="#pablo" onClick={e => e.preventDefault()}>
                         <img
@@ -705,7 +705,7 @@ function LandingPage() {
                         </div>
                       </a>
 
-                      <p className="card-description text-center">
+                      <p className="card-description text-justify">
                         Milo Đukanović biće predsednik Demokratske partije socijalista (DPS)  i u narednom periodu, odlučeno je na vanrednom Kongresu partije održanom danas u Podgorici.
                         Đukanović je bio jedini kandidat za predsednika te političke partije.
                         Ivan Vuković, Jevto Eraković, Sanja Damjanović i Abaz Dizdarević biće potpredsednici DPS-a.
@@ -743,8 +743,8 @@ function LandingPage() {
 
               </Col>
               <Col md="4">
-                <div className="firstDiv">
-                  <Card className="card-profile card-plain">
+                <div className="firstDiv" >
+                  <Card className="card-profile card-plain" style={{ paddingLeft: 25, paddingRight: 25 }}>
                     <div className="card-avatar">
                       <a href="#pablo" onClick={e => e.preventDefault()}>
                         <img
@@ -763,7 +763,7 @@ function LandingPage() {
                           <br />
                         </div>
                       </a>
-                      <p className="card-description text-center">
+                      <p className="card-description text-justify">
                         Predsjednik Saveza nezavisnih socijaldemokrata (SNSD) i predsjedavajući Predsjedništva Bosne i Hercegovine (BiH) Milorad Dodik zatražio je od predsjednika Stranke demokratske akcije (SDA) Bakira Izetbegovića da se izvini Srbima zbog izjave date u emisiji "Dnevnik D" Federalne televiziije (FTV).
                         Izetbegović je gostujući u ovoj emisiji, 21. januara i komentirajući zašto Milorad Dodik govori o secesiji Republike Srpske (RS) naveo kako smatra da Dodik želi da "ostane upamćen kao neko ko je sačuvao duh toga.
                     </p>
@@ -814,35 +814,35 @@ function LandingPage() {
               <h1 className="presentation-title2">Vijesti iz dijaspore</h1>
             </div>
             <Row>
-              <Col md="4">
-                <div className="firstDiv">
-                  <Card className="card-profile card-plain">
-                    <div className="card-avatar" >
-                      <a href="#pablo" onClick={e => e.preventDefault()}>
-                        <img
-                          alt="..."
-                          src={require("assets/img/faces/clem-onojeghuo-2.jpg")}
-                        />
-                      </a>
-                    </div>
-
-                    <CardBody >
-                      <div>
+                <Col md="4">
+                  <div className="firstDiv" >
+                    <Card className="card-profile card-plain" style={{ paddingLeft: 25, paddingRight: 25 }}>
+                      <div className="card-avatar" >
                         <a href="#pablo" onClick={e => e.preventDefault()}>
+                          <img
+                            alt="..."
+                            src={require("assets/img/faces/clem-onojeghuo-2.jpg")}
+                          />
+                        </a>
+                      </div>
+                      <NavLink to="/Other" tag={Link}>
+                      <CardBody >
+                        <div>
+
                           <br />
                           <CardTitle tag="h4">Aleksandar Vucic</CardTitle>
                           <h6 className="card-category">Predsjedik Srbije</h6>
                           <br />
-                          <p className="card-description text-center">
+                          <p className="card-description text-justify">
                             Danas je Aleksandar Vucic izasao medju narod i obratio se sa informacijom o statusu u drzavi.
                             Oporezivanje javnih preduzeca kao i freelance kompanija ce se nastaviti oporezivati do daljenjeg.
                             Iako su se mnogi protivili toj odluci, hteli ili ne morali su da prihvate tu odluku. |
                             Porez za freelancere iznosice 50% od ukupne sume. Sto se ostalih preduzeca tice iznosice 28%.
                             Do daljnjeg ce ova odluka biti na snazi.
                         </p>
-                        </a>
                       </div>
                     </CardBody>
+                    </NavLink>
 
                     <CardFooter className="text-center">
                       <Button
@@ -875,7 +875,7 @@ function LandingPage() {
               </Col>
               <Col md="4">
                 <div className="firstDiv">
-                  <Card className="card-profile card-plain">
+                  <Card className="card-profile card-plain" style={{ paddingLeft: 25, paddingRight: 25 }}>
                     <div className="card-avatar">
                       <a href="#pablo" onClick={e => e.preventDefault()}>
                         <img
@@ -895,7 +895,7 @@ function LandingPage() {
                         </div>
                       </a>
 
-                      <p className="card-description text-center">
+                      <p className="card-description text-justify">
                         Milo Đukanović biće predsednik Demokratske partije socijalista (DPS)  i u narednom periodu, odlučeno je na vanrednom Kongresu partije održanom danas u Podgorici.
                         Đukanović je bio jedini kandidat za predsednika te političke partije.
                         Ivan Vuković, Jevto Eraković, Sanja Damjanović i Abaz Dizdarević biće potpredsednici DPS-a.
@@ -933,8 +933,8 @@ function LandingPage() {
 
               </Col>
               <Col md="4">
-                <div className="firstDiv">
-                  <Card className="card-profile card-plain">
+                <div className="firstDiv" >
+                  <Card className="card-profile card-plain" style={{ paddingLeft: 25, paddingRight: 25 }}>
                     <div className="card-avatar">
                       <a href="#pablo" onClick={e => e.preventDefault()}>
                         <img
@@ -953,7 +953,7 @@ function LandingPage() {
                           <br />
                         </div>
                       </a>
-                      <p className="card-description text-center">
+                      <p className="card-description text-justify">
                         Predsjednik Saveza nezavisnih socijaldemokrata (SNSD) i predsjedavajući Predsjedništva Bosne i Hercegovine (BiH) Milorad Dodik zatražio je od predsjednika Stranke demokratske akcije (SDA) Bakira Izetbegovića da se izvini Srbima zbog izjave date u emisiji "Dnevnik D" Federalne televiziije (FTV).
                         Izetbegović je gostujući u ovoj emisiji, 21. januara i komentirajući zašto Milorad Dodik govori o secesiji Republike Srpske (RS) naveo kako smatra da Dodik želi da "ostane upamćen kao neko ko je sačuvao duh toga.
                     </p>

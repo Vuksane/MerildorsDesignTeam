@@ -41,11 +41,7 @@ function Other() {
             }}>
                 <ExamplesNavbar />
 
-                <Container style={{ paddingTop: 70 }}>
-                    
-                        <div className="title-brand">
-                            <h1 className="presentation-title2">Politika</h1>
-                        </div>
+                <Container style={{ paddingTop: 100 }}>
                         <Row>
                             <Col md="4">
                                 <div className="firstDiv" style={{ width: 1100 }}>
@@ -61,7 +57,7 @@ function Other() {
 
                                         <CardBody  >
                                             <div>
-                                                <NavLink to="/Politika" tag={Link}>
+                                                
                                                     <br />
                                                     <CardTitle tag="h4" className="card-category">Aleksandar Vucic</CardTitle>
                                                     <h6 className="card-category">Predsjedik Srbije</h6>
@@ -85,7 +81,7 @@ function Other() {
                                                         Porez za freelancere iznosice 50% od ukupne sume. Sto se ostalih preduzeca tice iznosice 28%.
                                                         Do daljnjeg ce ova odluka biti na snazi.
                         </p>
-                                                </NavLink>
+                                            
                                             </div>
                                         </CardBody>
 
@@ -119,6 +115,52 @@ function Other() {
                                 </div>
                             </Col>
                         </Row>
+                        <div className="title-brand">
+                            <h1 className="presentation-title2">KOMENTARI</h1>
+                        </div>
+                        <Row>
+                            <Col md="4">
+                                <div className="firstDiv" style={{ width: 1100 }}>
+                                    <Card className="card-profile card-plain" style={{ paddingLeft: 25, paddingRight: 25 }}>
+                                        <CardBody  >
+                                            <div>
+                                                
+                                                    <br />
+                                                    <p tag="h4" className="card-description text-justify">anonymous#0001</p>
+                                                    <br />
+                                                    <p className="card-description text-justify">
+                                                        Prvi komentar na portalu u vezi vesti sa Aleksandrom Vucicem 
+                                                    </p>
+                                            
+                                            </div>
+                                        </CardBody>
+
+                                        <CardFooter className="text-center">
+                                        </CardFooter>
+                                    </Card>
+                                </div>
+                                <div className="firstDiv" style={{ width: 1100 }}>
+                                    <Card className="card-profile card-plain" style={{ paddingLeft: 25, paddingRight: 25 }}>
+                                        <CardBody  >
+                                            <div>
+                                                
+                                                    <br />
+                                                    <p tag="h4" className="card-description text-justify">anonymous#0002</p>
+                                                    <br />
+                                                    <p className="card-description text-justify">
+                                                        Drugi komentar na portalu u vezi vesti sa Aleksandrom Vucicem 
+                                                    </p>
+                                            
+                                            </div>
+                                        </CardBody>
+
+                                        <CardFooter className="text-center">
+                                        </CardFooter>
+                                    </Card>
+                                </div>
+                            </Col>
+                        </Row>
+                        
               </Container>
         </div>
         </>
