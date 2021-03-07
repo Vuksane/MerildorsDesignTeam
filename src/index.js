@@ -27,11 +27,11 @@ import "assets/scss/paper-kit.scss";
 // pages
 
 import LandingPage from "views/examples/LandingPage.js";
-import KulturaIDrustvo from './KulturaIDrustvo';
-import Ekonomija from './Ekonomija'
-import KolumneIIntervjui from './KolumneIIntervjui'
-import VijestiIzDijaspore from './VijestiIzDijaspore'
-import Politika from './Politika';
+import KulturaIDrustvo from './views/examples/vesti/KulturaIDrustvo';
+import Ekonomija from './views/examples/vesti/Ekonomija'
+import KolumneIIntervjui from './views/examples/vesti/KolumneIIntervjui'
+import VijestiIzDijaspore from './views/examples/vesti/VijestiIzDijaspore'
+import Politika from './views/examples/vesti/Politika';
 import Other from './Other';
 
 // others
