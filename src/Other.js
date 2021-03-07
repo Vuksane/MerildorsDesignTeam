@@ -98,25 +98,15 @@ function Other() {
                 <Container style={{ paddingTop: 100 }}>
                         <Row>
                             <Col md="4">
-                                <div className="firstDiv" style={{ width: 1100 }}>
-                                    <Card className="card-profile card-plain" style={{ paddingLeft: 25, paddingRight: 25, paddingBottom: 25 }}>
-                                        <div className="card-avatar" >
-                                            <a href="#pablo" onClick={e => e.preventDefault()}>
-                                                <img
-                                                    alt="..."
-                                                    src={require("assets/img/faces/clem-onojeghuo-2.jpg")}
-                                                />
-                                            </a>
-                                        </div>
-
+                                <div className="firstDiv bg-light" style={{ width: 1100 }}>
+                                    <Card className="card-profile card-plain" style={{ paddingLeft: 50, paddingRight: 50, paddingBottom: 50 }}>
                                         <CardBody  >
                                             <div>
                                                 
                                                     <br />
-                                                    <CardTitle tag="h4" className="card-category">Aleksandar Vucic</CardTitle>
-                                                    <h6 className="card-category">Predsjedik Srbije</h6>
+                                                    <h2 className="card-category text-dark">Vest o Aleksandru Vucicu Predsjedik Srbije</h2>
                                                     <br />
-                                                    <p className="card-description text-justify">
+                                                    <p className="card-description text-justify text-dark" style={{ fontSize: 18 }}>
                                                         Danas je Aleksandar Vucic izasao medju narod i obratio se sa informacijom o statusu u drzavi.
                                                         Oporezivanje javnih preduzeca kao i freelance kompanija ce se nastaviti oporezivati do daljenjeg.
                                                         Iako su se mnogi protivili toj odluci, hteli ili ne morali su da prihvate tu odluku. |
@@ -142,34 +132,33 @@ function Other() {
                                 </div>
                             </Col>
                         </Row>
-                        <Button variant="primary" onClick={() => setModalShow(true)}>Ostavite komentar</Button>
+                        <Button type="button" className="btn btn-primary btn-lg" onClick={() => setModalShow(true)}>Ostavite komentar</Button>
                           <MyVerticallyCenteredModal
                             show={modalShow}
                             onHide={() => setModalShow(false)}
                           />
                         <Row style={{ paddingTop: 25 }}>
                             <Col md="4">
-                                <div className="firstDiv" style={{ width: 1100 }}>
+                                <div className="firstDiv bg-light" style={{ width: 1100 }}>
                                     <Card className="card-plain" style={{ paddingLeft: 25, paddingRight: 25 }}>
                                         <CardBody  >
                                             <div>
-                                                <p tag="h4" className="card-description text-justify">Anonymous#0001</p>
-                                                <p className="card-description text-justify">
+                                                <h4 className="card-description text-justify text-dark">Anonymous#0001</h4>
+                                                <p className="card-description text-justify text-dark" style={{ fontSize: 16 }}>
                                                     Prvi komentar na portalu u vezi vesti sa Aleksandrom Vucicem 
                                                 </p>
                                             </div>
                                         </CardBody>
                                     </Card>
                                 </div>
-                                <div className="firstDiv" style={{ width: 1100 }}>
+                                <div className="firstDiv bg-light" style={{ width: 1100 }}>
                                     <Card className="card-plain" style={{ paddingLeft: 25, paddingRight: 25 }}>
                                         <CardBody  >
                                             <div>
-                                                <p tag="h4" className="card-description text-justify">Anonymous#0002</p>
-                                                <p className="card-description text-justify">
+                                                <h4 className="card-description text-justify text-dark">Anonymous#0002</h4>
+                                                <p className="card-description text-justify text-dark" style={{ fontSize: 16 }}>
                                                     Drugi komentar na portalu u vezi vesti sa Aleksandrom Vucicem 
                                                 </p>
-                                            
                                             </div>
                                         </CardBody>
                                     </Card>
