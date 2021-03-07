@@ -46,10 +46,6 @@
   -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s; }
 
-.font_style_gigaaa {
-  font-family: "futura-pt",sans-serif !important;
-  color: #000;
-}
 
 
 .bootstrap-switch .bootstrap-switch-container {
