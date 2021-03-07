@@ -21,7 +21,7 @@ import React from "react";
 
 // reactstrap components
 import { Row, Container } from "reactstrap";
-require('css2/css2.css');
+require('css2.css');
 function DemoFooter() {
   return (
     <footer className="footer footer-black footer-white">
