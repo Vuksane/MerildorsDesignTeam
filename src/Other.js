@@ -23,84 +23,38 @@ import {
 // core components
 import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
 
+//const [listaKomentara, setListaKomentara] = React.useState([]);
 
+//let listaKomentara=[];
 // Funkcija modala koji se prikazuje kao alert nakon sto korisnik klikne da posalje komentar
-function MyVerticallyCenteredModal(props) {
-  const redirectToSDB = (e) => {
-   // e.preventDefault()
-    let username = e.target.username.value;
-    let komentar = e.target.komentar.value;
-
-    const requestOptions = { method: 'POST', headers: { 'Content-Type': 'application/json' }, 
-    body: JSON.stringify({ username:username, komentar:komentar }) };
-     fetch('http://localhost:3030/dodajKomentar?username=username&komentar=komentar', requestOptions) 
-     .then(response =>console.log(response)) 
-      .then(data => console.log(data));
-
-  }
-
-  return (
-
-    <Modal
-      {...props}
-      size="lg"
-      aria-labelledby="contained-modal-title-vcenter"
-      centered
-      style={{ backgroundImage: "url(" + require("assets/img/bridge5.jpg") + ")" }}
-    > <div className="section landing-section sectionLandingSection" id="maxHeight" style={{ backgroundColor: "black" }} >
-        <Modal.Body>
-          <Container>
-            <Row>
-              <Col className="ml-auto mr-auto" md="12">
-                <h2 id="scroll" className="text-center" style={{ color: "white" }}>Vas komentar?</h2><br></br>
-                <Form className="contact-form blurred_glass_quick_message2 blurred_glass_quick_message" onSubmit={redirectToSDB}>
-                  <Row>
-                    <Col md="12">
-                      <label>Korisnik</label>
-                      <InputGroup >
-                        <InputGroupAddon addonType="prepend">
-                          <InputGroupText>
-                            <i className="nc-icon nc-single-02" />
-                          </InputGroupText>
-                        </InputGroupAddon>
-                        <Input placeholder="Anonymous#0001" name="username" type="text" />
-                      </InputGroup>
-                    </Col>
-
-                  </Row>
-                  <label>Komentar</label>
-                  <Input
-                    placeholder="Napisite nam sta mislite o ovoj temi..."
-                    name="komentar"
-                    type="textarea"
-                    rows="4"
-                  />
-                  <Row>
-                    <Col className="ml-auto mr-auto" md="3">
-                      <Button type="submit">
-                        Prosledi
-                        </Button>
-                    </Col>
-                  </Row>
-                </Form>
-              </Col>
-            </Row>
-          </Container>
-
-        </Modal.Body></div>
-    </Modal>
-  );
-}
-
-
 require('css2.css');
 
 
 function Other() {
+  const [listaKomentara, setListaKomentara]=React.useState([]);
+  const redirectToSDB = (e) => {
+    e.preventDefault()
+    let username = e.target.username.value;
+    let komentar = e.target.komentar.value;
+
+
+    let category = {
+      "username": username,
+      "komentar": komentar
+    }
+
+    const requestOptions = {
+      method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(category)
+    };
+    fetch('http://localhost:3030/dodajKomentar', requestOptions)
+      .then(response => setListaKomentara(listaKomentara => [...listaKomentara, category]));  
+
+  }
 
 
   let styleobj = { fontSize: 45, width: 1000, marginLeft: -90 }
-  const [modalShow, setModalShow] = React.useState(false);
+ 
   return (
     <>
       <div className="section section-dark text-center" id="maxHeight" style={{
@@ -145,37 +99,65 @@ function Other() {
               </div>
             </Col>
           </Row>
-          <Button type="button" className="btn btn-primary btn-lg" onClick={() => setModalShow(true)}>Ostavite komentar</Button>
-          <MyVerticallyCenteredModal
-            show={modalShow}
-            onHide={() => setModalShow(false)}
-          />
+          <Button type="button" className="btn btn-primary btn-lg">Ostavite komentar</Button>
+          <div className="section landing-section sectionLandingSection" id="maxHeight" style={{ backgroundColor: "black" }} >
+     
+          <Container>
+            <Row>
+              <Col className="ml-auto mr-auto" md="12">
+                <h2 id="scroll" className="text-center" style={{ color: "white" }}>Vas komentar?</h2><br></br>
+                <Form className="contact-form blurred_glass_quick_message2 blurred_glass_quick_message" onSubmit={redirectToSDB}>
+                  <Row>
+                    <Col md="12">
+                      <label>Korisnik</label>
+                      <InputGroup >
+                        <InputGroupAddon addonType="prepend">
+                          <InputGroupText>
+                            <i className="nc-icon nc-single-02" />
+                          </InputGroupText>
+                        </InputGroupAddon>
+                        <Input placeholder="Anonymous#0001" name="username" type="text" />
+                      </InputGroup>
+                    </Col>
+
+                  </Row>
+                  <label>Komentar</label>
+                  <Input
+                    placeholder="Napisite nam sta mislite o ovoj temi..."
+                    name="komentar"
+                    type="textarea"
+                    rows="4"
+                  />
+                  <Row>
+                    <Col className="ml-auto mr-auto" md="3">
+                      <Button type="submit">
+                        Prosledi
+                        </Button>
+                    </Col>
+                  </Row>
+                </Form>
+              </Col>
+            </Row>
+          </Container>
+
+      </div>
           <Row style={{ paddingTop: 25 }}>
             <Col md="4">
-              <div className="firstDiv bg-light" style={{ width: 1100 }}>
-                <Card className="card-plain" style={{ paddingLeft: 25, paddingRight: 25 }}>
-                  <CardBody  >
-                    <div>
-                      <h4 className="card-description text-justify text-dark">Anonymous#0001</h4>
-                      <p className="card-description text-justify text-dark" style={{ fontSize: 16 }}>
-                        Prvi komentar na portalu u vezi vesti sa Aleksandrom Vucicem
-                                                </p>
-                    </div>
-                  </CardBody>
-                </Card>
-              </div>
-              <div className="firstDiv bg-light" style={{ width: 1100 }}>
-                <Card className="card-plain" style={{ paddingLeft: 25, paddingRight: 25 }}>
-                  <CardBody  >
-                    <div>
-                      <h4 className="card-description text-justify text-dark">Anonymous#0002</h4>
-                      <p className="card-description text-justify text-dark" style={{ fontSize: 16 }}>
-                        Drugi komentar na portalu u vezi vesti sa Aleksandrom Vucicem
-                                                </p>
-                    </div>
-                  </CardBody>
-                </Card>
-              </div>
+
+              {listaKomentara!=null && listaKomentara.map(function (item, i) {
+                return <div key={i} className="firstDiv bg-light" style={{ width: 1100 }}>
+                  <Card className="card-plain" style={{ paddingLeft: 25, paddingRight: 25 }}>
+                    <CardBody  >
+                      <div>
+                        <h4 className="card-description text-justify text-dark">{item.username}</h4>
+                        <p className="card-description text-justify text-dark" style={{ fontSize: 16 }}>
+                          {item.komentar}
+                        </p>
+                      </div>
+                    </CardBody>
+                  </Card>
+                </div>
+              })}
             </Col>
           </Row>
 
