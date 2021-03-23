@@ -72,7 +72,7 @@ export default function Politika(props) {
                           />
                         </a>
                       </div>
-                      <NavLink to="/Other" tag={Link}>
+                      <NavLink to="/Vest" tag={Link}>
                       <CardBody >
                         <div>
 

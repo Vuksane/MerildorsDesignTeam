@@ -64,7 +64,7 @@ export default function KulturaIDrustvo(props) {
                           />
                         </a>
                       </div>
-                      <NavLink to="/Other" tag={Link}>
+                      <NavLink to="/Vest" tag={Link}>
                       <CardBody >
                         <div>
 
