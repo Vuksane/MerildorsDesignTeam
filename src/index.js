@@ -32,8 +32,9 @@ import Ekonomija from './views/examples/vesti/Ekonomija'
 import KolumneIIntervjui from './views/examples/vesti/KolumneIIntervjui'
 import VijestiIzDijaspore from './views/examples/vesti/VijestiIzDijaspore'
 import Politika from './views/examples/vesti/Politika';
+import Vest from './Vest';
+import Adminpanelindex from './views/examples/adminpanel/Adminpanelindex';
 import Other from './Other';
-
 // others
 ReactDOM.render(
 
@@ -71,10 +72,17 @@ ReactDOM.render(
         render={props => <VijestiIzDijaspore {...props} />}
       />
       <Route
+        path="/Vest"
+        render={props => <Vest {...props} />}
+      />
+      <Route
+        path="/Adminpanelindex"
+        render={props => <Adminpanelindex {...props} />}
+      />
+      <Route
         path="/Other"
         render={props => <Other {...props} />}
       />
-
       <Redirect to="/" />
     </Switch>
   </BrowserRouter>,
