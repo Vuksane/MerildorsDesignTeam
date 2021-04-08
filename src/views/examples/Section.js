@@ -33,7 +33,7 @@ const Section = ({data,title, img}) => {
             backgroundSize: 'cover',
             overflow: 'hidden',
             margin: 50,
-            border: '10px solid #CDCDCD',
+            border: '10px solid #5bc0de',
           }}>
             <Container style={{ paddingTop: 70 }}>
               <div className="title-brand">

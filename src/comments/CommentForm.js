@@ -38,17 +38,17 @@ const CommentForm = ({news}) => {
             <Row>
               <Col className="ml-auto mr-auto" md="12">
                 <h2 id="scroll" className="text-center" style={{ color: 'white' }}>Vas komentar?</h2><br></br>
-                <Form onSubmit={(e)=>handleSubmit(e)} className="contact-form blurred_glass_quick_message2 blurred_glass_quick_message">
+                <Form onSubmit={(e)=>handleSubmit(e)} className="contact-form blurred_glass_quick_message2 blurred_glass_quick_message" style={{borderRadius: "15px" , border: "4px solid #5bc0de" }}>
                   <Row>
                     <Col md="12">
                       <label style={{color: "grey", fontSize: 18}}>Korisnik</label>
-                        <Input value={comment.username} onChange={(e)=>setComment({...comment, username:e.target.value})} placeholder="Anonymous" name="username" type="text" />
+                        <Input value={comment.username} onChange={(e)=>setComment({...comment, username:e.target.value})} placeholder="Ime/Username" name="username" type="text" />
                     </Col>
                   </Row>
                   <Row>
                     <Col md="12">
                       <label style={{color: "grey", fontSize: 18}}>Email</label>
-                        <Input value={comment.email} onChange={(e)=>setComment({...comment, email:e.target.value})} placeholder="anonymous@gmail.com" name="email" type="email" />
+                        <Input value={comment.email} onChange={(e)=>setComment({...comment, email:e.target.value})} placeholder="email@gmail.com" name="email" type="email" />
                     </Col>
                   </Row>
                   <Row>

@@ -1,7 +1,16 @@
 import React from "react";
+import { useLocation  } from "react-router-dom";
 import { Row, Container } from "reactstrap";
 
 function DemoFooter() {
+
+  let location = useLocation();
+  if (location.pathname.match(/Adminpanelindex/)){
+    return null;
+  } 
+  else if (location.pathname.match(/Adminpanellogin/)){
+    return null;
+  }
   return (
     <footer className="footer footer-black footer-white">
       <Container>

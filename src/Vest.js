@@ -53,14 +53,14 @@ function Vest({data}) {
             <div className="firstDiv2 bg-light" style={{ width: 1100 }}>
               <Card
                 className="card-profile card-plain"
-                style={{ paddingLeft: 50, paddingRight: 50, paddingBottom: 50 }}
+                style={{ paddingLeft: 50, paddingRight: 50, paddingBottom: 50, borderRadius: "10px" , border: "4px solid #5bc0de" }}
               >
                 <CardBody>
                   <div>
                     <br />
                     <h2 className="card-category text-dark">{news.naslovVesti}</h2>
                     <br />
-                    <pre className="card-description text-justify text-dark" style={{ fontSize: 18 }}>{news.textVesti}</pre>
+                    <pre className="card-description text-justify" style={{ fontSize: 17 }}>{news.textVesti}</pre>
                   </div>
                 </CardBody>
               </Card>

@@ -9,14 +9,19 @@ const AdminpanelindexListaNaslova = ({data, title}) => {
 
     return (<>
         <MDBTableHead color="primary-color" textBlack>
-            <tr>
-                <th>{title}</th>
+            <tr style={{backgroundColor: "#5bc0de"}}>
+                <th>Vest: {title}</th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
             </tr>
-            <tr>
-                <th>ID</th>
-                <th>Username</th>
-                <th>Email</th>
-                <th>Komentar</th>
+            <tr style={{backgroundColor: "#5cb85c"}}>
+                <th width="20%">ID</th>
+                <th width="10%">Username</th>
+                <th width="20%">Email</th>
+                <th width="40%">Komentar</th>
+                <th width="10%"></th>
             </tr>
         </MDBTableHead>
         <MDBTableBody>

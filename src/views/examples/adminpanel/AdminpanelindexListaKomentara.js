@@ -9,11 +9,11 @@ import moment from "moment";
 const AdminpanelindexListaKomentara = ({data}) => {
 
     const {idkomentari, username, email, criticism} = data
-
+    const alert = useAlert();
     const deleteKomentar = (e) => {
         deleteComment(data).then((res)=>{
         })
-        window.location.reload();
+        alert.info('Obrisali ste ovaj komentar!')
     };
     return (
         <tr key={idkomentari}>
