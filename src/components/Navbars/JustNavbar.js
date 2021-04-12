@@ -56,9 +56,9 @@ const JustNavbar = () => {
             <img
                 style={{ marginLeft: "-10px" }}
                 alt="..."
-                width="50px"
-                height="50px"
-                src={require("assets/img/grb.png")}
+                width="140px"
+                height="140px"
+                src={require("assets/img/aaa.png")}
             />
             <NavbarBrand data-placement="bottom" to="/" tag={Link}>
                 NAŠA DOMOVINA

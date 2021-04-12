@@ -5,7 +5,7 @@ import { MDBTable, MDBTableBody, MDBTableHead } from 'mdbreact';
 import { getAllNews } from "../../../services/API";
 import AdminpanelindexListaKomentara from "./AdminpanelindexListaKomentara";
 
-const AdminpanelindexListaNaslova = ({data, title}) => {
+const AdminpanelindexListaNaslova = ({deleteKomentar, data, title}) => {
 
     return (<>
         <MDBTableHead color="primary-color" textBlack>
@@ -16,7 +16,7 @@ const AdminpanelindexListaNaslova = ({data, title}) => {
                 <th></th>
                 <th></th>
             </tr>
-            <tr style={{backgroundColor: "#5cb85c"}}>
+            <tr style={{backgroundColor: "#2D6880"}}>
                 <th width="20%">ID</th>
                 <th width="10%">Username</th>
                 <th width="20%">Email</th>
@@ -25,7 +25,7 @@ const AdminpanelindexListaNaslova = ({data, title}) => {
             </tr>
         </MDBTableHead>
         <MDBTableBody>
-            {data?Object.keys(data).map(el=><AdminpanelindexListaKomentara data={data[el]}/>):null}
+            {data?Object.keys(data).map(el=><AdminpanelindexListaKomentara deleteKomentar={deleteKomentar} data={data[el]}/>):null}
         </MDBTableBody>       
     </>)
 }

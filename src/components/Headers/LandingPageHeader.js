@@ -3,7 +3,7 @@ import { Container } from "reactstrap";
 
 function LandingPageHeader() {
   //variables
-  let styleobj = { fontSize: 46, width: 1000, marginLeft: -90 };
+  let styleobj = { fontSize: 46 };
   //body
   return (
     <>
@@ -16,7 +16,7 @@ function LandingPageHeader() {
         <div className="filter" />
         <div className="content-center">
           <Container>
-            <div className="title-brand" style={{ paddingTop: 140 }}>
+            <div className="title-brand col-12" style={{ paddingTop: 140 }}>
               <h3 className="presentation-title" style={styleobj}>
                 Domovina Dijaspora Demokratski Dijalog
               </h3>

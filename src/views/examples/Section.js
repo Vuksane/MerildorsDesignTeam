@@ -32,7 +32,7 @@ const Section = ({data,title, img}) => {
             backgroundImage: "url(" + require(`assets/img${img}`) + ")",
             backgroundSize: 'cover',
             overflow: 'hidden',
-            margin: 50,
+            margin: "2em",
             border: '10px solid #5bc0de',
           }}>
             <Container style={{ paddingTop: 70 }}>

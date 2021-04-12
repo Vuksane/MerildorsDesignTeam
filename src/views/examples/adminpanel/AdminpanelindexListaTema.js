@@ -9,13 +9,13 @@ const AdminpanelindexListaTema = ({deleteVest, data, title}) => {
 
     return (<>
         <MDBTableHead color="primary-color" textBlack>
-            <tr style={{backgroundColor: "#5bc0de"}}>
+            <tr style={{backgroundColor: "#5bc0de", color:'white'}}>
                 <th>Tema: {title}</th>
                 <th></th>
                 <th></th>
                 <th></th>
             </tr>
-            <tr style={{backgroundColor: "#5cb85c"}}>
+            <tr style={{backgroundColor: "#2D6880", color:'white'}}>
                 <th width="15%">ID</th>
                 <th width="55%">Naslov Vesti</th>
                 <th width="20%">Datum Vesti</th>

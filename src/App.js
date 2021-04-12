@@ -72,7 +72,9 @@ export default function App() {
   </ProvideAuth>
 </>);
 }
-  function LoginPage() {
+  function LoginPage() { 
+    var CryptoJS = require("crypto-js");
+
     let history = useHistory();
     let location = useLocation();
     let auth = useAuth();
@@ -81,13 +83,37 @@ export default function App() {
       username: "",
       password: "",
     });
-
+ 
+    const [criptedAuthorisation, setCriptedAuthorisation] = useState({
+      criptUser: "",
+      criptPass: "",
+    })
+    let key = "7x!A%D*G";
+    useEffect(() => {
+      let criptedUsername = CryptoJS.AES.encrypt(authorisation.username, key);
+      let stringedCriptedUsername = criptedUsername.toString();
+      let criptedPassword = CryptoJS.AES.encrypt(authorisation.password, key);
+      let stringedCriptedPassword = criptedPassword.toString();
+      setCriptedAuthorisation({
+        criptUser: stringedCriptedUsername,
+        criptPass: stringedCriptedPassword
+      })
+    }, [authorisation])
+    
     let { from } = location.state || { from: { pathname: "/Adminpanelindex" } };
     let login = (e) => {
       e.preventDefault();
-      localStorage.setItem("credentials", JSON.stringify(authorisation))
+
+      localStorage.setItem("credentials", JSON.stringify(criptedAuthorisation))
       let credential = JSON.parse(localStorage.getItem("credentials"))
-      if(credential.username === credentials.username && credential.password === credentials.password){
+
+      let decryptUsername = CryptoJS.AES.decrypt(credential.criptUser, key);
+      let decryptPassword = CryptoJS.AES.decrypt(credential.criptPass, key);
+      
+      let fullydecriptedUsername = decryptUsername.toString(CryptoJS.enc.Utf8);
+      let fullydecriptedPassword = decryptPassword.toString(CryptoJS.enc.Utf8);
+
+      if( fullydecriptedUsername === credentials.username && fullydecriptedPassword === credentials.password){
         auth.signin(() => {
           history.replace(from);
         });
@@ -96,11 +122,15 @@ export default function App() {
         alert.info("Neuspesno logovanje")
         setAuthorisation({
           username: "",
-          password: ""
+          password: "",
         })
       } 
       
+      console.log(criptedAuthorisation, "user")
+      
     };
+    console.log(criptedAuthorisation, "pass")
+    
 
     return (
       <div className="section section-dark text-center" id="maxHeight" style={{ height: "100vh", backgroundColor: "grey" }} >
@@ -119,6 +149,7 @@ export default function App() {
                     }
                     name="username"
                     type="text"
+                    pattern="[A-Za-z0-9]{8,}"
                   />
                 </Col>
               </Row>
@@ -133,6 +164,7 @@ export default function App() {
                     placeholder="Password"
                     name="password"
                     type="password"
+                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
                   />
                 </Col>
               </Row>

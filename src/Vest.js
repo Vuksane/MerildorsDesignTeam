@@ -45,12 +45,13 @@ function Vest({data}) {
       id="maxHeight"
       style={{
         backgroundImage: "url(" + require("assets/img/muzej.jpg") + ")",
+        backgroundAttachment: 'fixed',
       }}
     >
       <Container style={{ paddingTop: 100 }}>
         <Row>
-          <Col md="4">
-            <div className="firstDiv2 bg-light" style={{ width: 1100 }}>
+          <Col ld="4">
+            <div className="firstDiv2 bg-light">
               <Card
                 className="card-profile card-plain"
                 style={{ paddingLeft: 50, paddingRight: 50, paddingBottom: 50, borderRadius: "10px" , border: "4px solid #5bc0de" }}
@@ -60,7 +61,7 @@ function Vest({data}) {
                     <br />
                     <h2 className="card-category text-dark">{news.naslovVesti}</h2>
                     <br />
-                    <pre className="card-description text-justify" style={{ fontSize: 17 }}>{news.textVesti}</pre>
+                    <pre className="card-description text-justify" style={{ fontSize: 16, fontWeight: 400 }}>{news.textVesti}</pre>
                   </div>
                 </CardBody>
               </Card>

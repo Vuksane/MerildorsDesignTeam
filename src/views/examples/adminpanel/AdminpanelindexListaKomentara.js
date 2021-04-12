@@ -2,28 +2,26 @@ import React, { useState, useEffect } from "react";
 import { getAllNews } from "../../../services/API";
 import { MDBTable, MDBTableBody, MDBTableHead } from 'mdbreact';
 import { Button } from "react-bootstrap";
-import { deleteComment } from "../../../services/API";
 import { useAlert } from "react-alert";
 import moment from "moment";
+import ConfirmationModalCom from "../../../components/Modals/ConfrimationModalCom"
 
-const AdminpanelindexListaKomentara = ({data}) => {
+const AdminpanelindexListaKomentara = ({deleteKomentar, data}) => {
 
     const {idkomentari, username, email, criticism} = data
-    const alert = useAlert();
-    const deleteKomentar = (e) => {
-        deleteComment(data).then((res)=>{
-        })
-        alert.info('Obrisali ste ovaj komentar!')
-    };
-    return (
+    const [show, setShow] = useState(false);
+    const handleShow = () => setShow(true);
+    
+    return (<>
+        <ConfirmationModalCom show={show} setShow={setShow} deleteKomentar={deleteKomentar} data={data} />
         <tr key={idkomentari}>
             <th>{idkomentari}</th>
             <th>{username}</th>
             <th>{email}</th>
             <th>{criticism}</th>
-            <th><Button onClick={deleteKomentar}>X</Button></th>
+            <th><Button onClick={() => handleShow()}>X</Button></th>
         </tr>
-    )
+    </>)
 }
 
 export default AdminpanelindexListaKomentara

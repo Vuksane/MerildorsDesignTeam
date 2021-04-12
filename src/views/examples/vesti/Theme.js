@@ -32,20 +32,6 @@ export default function Theme(props) {
     setPolitikaNews(sortedDataByDate)
   }, [news])
 
-  let pageHeader = React.createRef();
-  React.useEffect(() => {
-    if (window.innerWidth < 991) {
-      const updateScroll = () => {
-        let windowScrollTop = window.pageYOffset / 3;
-        pageHeader.current.style.transform =
-          "translate3d(0," + windowScrollTop + "px,0)";
-      };
-      window.addEventListener("scroll", updateScroll);
-      return function cleanup() {
-        window.removeEventListener("scroll", updateScroll);
-      };
-    }
-  });
 
   const podaci = {
     "politika" :
@@ -84,11 +70,12 @@ export default function Theme(props) {
             backgroundImage:
               "url(" + require("assets/img"+podaci[location.pathname.substring(1)].background) + ")",
             backgroundSize: "cover",
+            backgroundAttachment: 'fixed',
           }}
         >
           <Container>
             <Row style={{paddingTop: '200px'}}>
-              <div className="firstDiv">
+              <div className="firstDiv" >
                 {politikaNews.map(el=><AllCards key={Math.random()} cardData={el}/>)} 
               </div>
             </Row>

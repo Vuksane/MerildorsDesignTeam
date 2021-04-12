@@ -13,7 +13,7 @@ const SectionCard = ({cardData}) => {
   }
 
     return (
-        <Card onClick={()=>handleClick()} className="card-profile card-plain" style={{background:'white', borderRadius:'5px', border:'5px solid #5bc0de', cursor:'pointer', paddingRight: '20px', paddingLeft: '20px'}}>
+        <Card onClick={()=>handleClick()} className="card-profile card-plain col-md-3" style={{background:'white', margin: "4%", borderRadius:'5px', border:'5px solid #5bc0de', cursor:'pointer', paddingRight: '20px', paddingLeft: '20px'}}>
           <CardBody>
             <div>
               <h4 className="card-category" style={{color:'black'}} >{naslovVesti}</h4>

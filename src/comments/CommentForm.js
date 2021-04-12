@@ -42,13 +42,17 @@ const CommentForm = ({news}) => {
                   <Row>
                     <Col md="12">
                       <label style={{color: "grey", fontSize: 18}}>Korisnik</label>
-                        <Input value={comment.username} onChange={(e)=>setComment({...comment, username:e.target.value})} placeholder="Ime/Username" name="username" type="text" />
+                        <Input value={comment.username} onChange={(e)=>setComment({...comment, username:e.target.value})} placeholder="Ime (minimum 3 karaktera)" name="username" type="text" 
+                          pattern="[A-Za-z]{3,}"
+                        />
                     </Col>
                   </Row>
                   <Row>
                     <Col md="12">
                       <label style={{color: "grey", fontSize: 18}}>Email</label>
-                        <Input value={comment.email} onChange={(e)=>setComment({...comment, email:e.target.value})} placeholder="email@gmail.com" name="email" type="email" />
+                        <Input value={comment.email} onChange={(e)=>setComment({...comment, email:e.target.value})} placeholder="email@gmail.com" name="email" type="email" 
+                          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                        />
                     </Col>
                   </Row>
                   <Row>

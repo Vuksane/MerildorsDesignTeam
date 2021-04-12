@@ -14,6 +14,7 @@ import moment from "moment";
 //Tabele za izlistavanje vesti 
 import { MDBTable, MDBTableBody, MDBTableHead } from 'mdbreact';
 import { deleteNews } from "../../../services/API";
+import { deleteComment } from "../../../services/API";
 //Stranice Admin panela
 import AdminpanelindexListaTema from "./AdminpanelindexListaTema";
 import AdminpanelindexListaNaslova from "./AdminpanelindexListaNaslova";
@@ -71,6 +72,14 @@ function Adminpanelindex() {
   //Use State za ubacene vesti
   const [isSent, setIsSent] = useState(false)
 
+   //Use State za obrisane komentare
+   const [isComDelete, setIsComDelete] = useState(false)
+
+   //Use State za ubacene komentare
+   const [isComSent, setIsComSent] = useState(false)
+
+
+
   //Funkcija koja brise vesti iz baze
   const deleteVest = (data) => {
     deleteNews(data).then((res)=>{
@@ -78,6 +87,13 @@ function Adminpanelindex() {
     })
     alert.info('Obrisali ste sledecu vest: ' + data.naslovVesti)
   };
+  //Funkcija koja brise komentare iz baze
+  const deleteKomentar = (data) => {
+    deleteComment(data).then((res)=>{
+      setIsComDelete(!isComDelete);
+    })
+    alert.info('Obrisali ste komentar korisnika: ' + data.username + " za vest: " +data.naslovVesti)
+};
 
   //Use State koji cuva podatke iz forme za dodavanje nove vesti
   const [objekat, setObjekat] = useState({
@@ -140,7 +156,7 @@ function Adminpanelindex() {
     getAllComments().then(res => {
       setComment(res.data)
     })
-  }, [isDelete, isSent])
+  }, [isDelete, isSent, isComDelete, isComSent])
   
   //Use Effect koji filtrira vesti iz baze u Use State za smestanje svih vesti po naslovu teme
   useEffect(() => {
@@ -278,7 +294,7 @@ function Adminpanelindex() {
             maxHeight="100vh"
           >
             {/*Mapiranje koje kreira sektore po filtriranim komentarima i po njihovim naslovima vesti */}
-            {titles?Object.keys(titles).map(el=><AdminpanelindexListaNaslova title={el} data={titles[el]}/>):null}
+            {titles?Object.keys(titles).map(el=><AdminpanelindexListaNaslova title={el} deleteKomentar={deleteKomentar} data={titles[el]}/>):null}
           </MDBTable>
         </TabPane>
       </Tabs>
