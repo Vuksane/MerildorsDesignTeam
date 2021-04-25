@@ -8,7 +8,13 @@ function DemoFooter() {
   if (location.pathname.match(/Adminpanelindex/)){
     return null;
   } 
+  else if (location.pathname.match(/adminpanelindex/)){
+    return null;
+  }
   else if (location.pathname.match(/Adminpanellogin/)){
+    return null;
+  }
+  else if (location.pathname.match(/adminpanellogin/)){
     return null;
   }
   return (
