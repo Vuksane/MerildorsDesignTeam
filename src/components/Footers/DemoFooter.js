@@ -1,28 +1,16 @@
-/*!
-
-=========================================================
-* Paper Kit React - v1.0.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/paper-kit-react
-
-* Copyright 2019 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/paper-kit-react/blob/master/LICENSE.md)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
-/*eslint-disable*/
 import React from "react";
-
-// reactstrap components
+import { useLocation  } from "react-router-dom";
 import { Row, Container } from "reactstrap";
-require('css2.css');
+
 function DemoFooter() {
+
+  let location = useLocation();
+  if (location.pathname.match(/Adminpanelindex/)){
+    return null;
+  } 
+  else if (location.pathname.match(/Adminpanellogin/)){
+    return null;
+  }
   return (
     <footer className="footer footer-black footer-white">
       <Container>
@@ -33,6 +21,7 @@ function DemoFooter() {
                 <a
                   href="https://www.creative-tim.com?ref=pkr-footer"
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
                   Instagram
                 </a>
@@ -41,6 +30,7 @@ function DemoFooter() {
                 <a
                   href="http://blog.creative-tim.com/?ref=pkr-footer"
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
                   Facebook
                 </a>
@@ -49,19 +39,23 @@ function DemoFooter() {
                 <a
                   href="https://www.creative-tim.com/license?ref=pkr-footer"
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
                   twitter
                 </a>
               </li>
             </ul>
           </nav>
-
-          <section>
-
-          </section>
+          <div className="credits ml-auto">
+            <span className="mail" style={{ fontSize: 15, fontWeight: 400 }}>
+              Pisite nam na: domovinadijaspora4d@gmail.com
+            </span>
+          </div>
+          <section></section>
           <div className="credits ml-auto">
             <span className="copyright">
-              <i className="fa fa-heart heart" />All rights reserved © Merildor's Design
+              <i className="fa fa-heart heart" />
+              All rights reserved © Merildor's Design
             </span>
           </div>
         </Row>

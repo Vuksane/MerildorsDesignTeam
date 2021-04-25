@@ -1,24 +1,14 @@
 import React from 'react';
-import { Link } from "react-router-dom";
-import {
-  Button,
-  Card,
-  CardBody,
-  CardFooter,
-  CardTitle,
-  NavLink,
-  Container,
-  Row,
-  Col
-} from "reactstrap";
 // core components
-import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
 import LandingPageHeader from "components/Headers/LandingPageHeader.js";
-import DemoFooter from "components/Footers/DemoFooter.js";
+import MainCard from './MainCard'
+import { Card, Container, Row, Col } from "react-bootstrap";
+import { CardBody } from "reactstrap";
 
 require('css2.css');
 
-function LandingPage() {
+function LandingPage({filteredData}) {
+
   document.documentElement.classList.remove("nav-open");
   React.useEffect(() => {
     document.body.classList.add("profile-page");
@@ -27,113 +17,70 @@ function LandingPage() {
     };
   });
   return (<>
-    <ExamplesNavbar />
     <LandingPageHeader />
-      <div className="main">
-        <div className="section section-dark text-center" style={{
-          backgroundImage: "url(" + require("assets/img/plavidvoraccetinje.jpg") + ")",
-          backgroundSize: 'cover',
-          overflow: 'hidden',
-          margin: 50,
-          border: '10px solid #CDCDCD',
-        }}>
-          <Container style={{ paddingTop: 70 }}>
-            <div className="title-brand">
-              <h1 className="presentation-title2">Politika</h1>
+    <div className="main">
+      <div className="section section-dark text-center" style={{
+        backgroundColor: 'white',
+        overflow: 'hidden',
+        margin: "2em",
+      }}>
+        <Container>
+          <Row>
+            <div className="firstDiv2 bg-light">
+              <Card
+                className="card-profile card-plain"
+                style={{ padding: '5%', border: '10px solid #5bc0de'}}
+              >
+                <CardBody>
+                  <div>
+                    <pre className="card-description text-justify" style={{ fontSize: 18, fontWeight: 400 }}>
+                      Dragi prijatelji,
+                      <br/><br/>
+                      Već duže vremena u krugovima dijaspore javila se potreba za jednim
+                      autentičnim glasilom, u ovom slučaju internet portalom, koji bi na građanski i
+                      civilizovan način omogućio razmjenu mišljenja i stavova vezanih prije svega za
+                      potrebe crnogorske dijaspore i njenu neupitnu i nemjerljivu ljubav prema Crnoj
+                      Gori.
+                      <br/><br/>
+                      Kao višedecenijski istaknuti građanski aktivista u crnogorskoj dijaspori a na
+                      nagovor mnogih prijatelja iz Crne Gore i njene dijaspore, stavih na svoja nejaka
+                      pleća i teret pokretanja ovog portala, pa se nadam da ćete mi u tome svojim
+                      komentarima, prijedlozima, savjetima i pogotovo radovima koje ćemo
+                      objavljivati na razne teme, uveliko pomoći.
+                      <br/><br/>
+                      Sarađujući sa našim portalom ujedno pomazete u boljem razumijevanju između naše domovine Crne Gore i njene dijaspore!
+                      <br/><br/>
+                      Kako nam i sami naziv kaže, bićemo otvoreni za razna misljenja I sučeljavanja
+                      stavova, uz jednu ogradu: administrator će brisati sve grube uvrede, kako
+                      pojedinaca, tako i politickih subjekata a naročito Crne Gore i njenog prava da
+                      postoji kao suverena i demokratska država!
+                      <br/><br/>
+                      Osim komentara koje možete ostavljati direktno ispod teksta koji objavljujemo, više su nego dobrodošli vaši autorski tekstovi koje ćemo sa zadovoljstvom
+                      objavljivati! 
+                      <br/><br/>
+                      Naša i vaša e-mail adresa je:
+                      <br/><br/>
+                      domovinadijaspora4d@gmail.com
+                      <br/><br/>
+                      DEMOKRATSKA SINERGIJA JE JEDINI METOD OSTVARIVANJA 
+                      PROSPERITETNOG DRUŠTVA!
+                      <br/><br/>
+                      Iskreno Vaš,
+                      <br/><br/>
+                      Mr. Vladislav Vanja Popović, 
+                      <br/><br/>
+                      glavni urednik
+                    </pre>
+                  </div>
+                </CardBody>
+              </Card> 
             </div>
-            <Row>
-              <Col md="4">
-                <div className="firstDiv" >
-                  <Card className="card-profile card-plain" style={{ paddingLeft: 25, paddingRight: 25 }}>
-                    <div className="card-avatar" >
-                      <a href="#pablo" onClick={e => e.preventDefault()}>
-                        <img alt="..." src={require("assets/img/faces/clem-onojeghuo-2.jpg")} />
-                      </a>
-                    </div>
-                    <NavLink to="/Vest" tag={Link}>
-                      <CardBody >
-                        <div>
-                          <CardTitle tag="h4">Aleksandar Vucic</CardTitle>
-                          <h6 className="card-category"></h6>
-                          <p className="card-description text-justify"></p>
-                      </div>
-                    </CardBody>
-                    </NavLink>
-                    <CardFooter className="text-center">
-                      <Button className="btn-just-icon btn-neutral" color="link" href="#pablo" onClick={e => e.preventDefault()}><i className="fa fa-twitter" /></Button>
-                      <Button className="btn-just-icon btn-neutral ml-1" color="link" href="#pablo" onClick={e => e.preventDefault()}><i className="fa fa-google-plus" /></Button>
-                      <Button className="btn-just-icon btn-neutral ml-1" color="link" href="#pablo" onClick={e => e.preventDefault()}><i className="fa fa-linkedin" /></Button>
-                    </CardFooter>
-                  </Card>
-                </div>
-              </Col>
-            </Row>
-          </Container>
-        </div>
-        <div className="section section-dark text-center" style={{
-          backgroundImage: "url(" + require("assets/img/muzej.jpg") + ")",
-          backgroundSize: 'cover',
-          overflow: 'hidden',
-          margin: 50,
-          border: '10px solid #CDCDCD',
-        }}>
-
-          <Container style={{ paddingTop: 100 }}>
-            <h1 className="title">Kultura i drustvo</h1>
-            <Row>
-            </Row>
-          </Container>
-        </div>
-        <div className="section section-dark text-center" style={{
-          backgroundImage: "url(" + require("assets/img/manastir.jpg") + ")",
-          backgroundSize: 'cover',
-          overflow: 'hidden',
-          margin: 50,
-          border: '10px solid #CDCDCD',
-        }}>
-          <Container style={{ paddingTop: 100 }}>
-            <div className="title-brand">
-              <h1 className="presentation-title2">Ekonomija</h1>
-            </div>
-            <Row>
-            </Row>
-          </Container>
-        </div>
-        <div className="section section-dark text-center" style={{
-          backgroundImage: "url(" + require("assets/img/plavidvoraccetinje.jpg") + ")",
-          backgroundSize: 'cover',
-          overflow: 'hidden',
-          margin: 50,
-          border: '10px solid #CDCDCD',
-        }}>
-
-          <Container style={{ paddingTop: 100 }}>
-            <div className="title-brand">
-              <h1 className="presentation-title2">Kolumne i Intervjui</h1>
-            </div>
-            <Row>
-            </Row>
-          </Container>
-        </div>
-        <div className="section section-dark text-center" style={{
-          backgroundImage: "url(" + require("assets/img/plavidvoraccetinje.jpg") + ")",
-          backgroundSize: 'cover',
-          overflow: 'hidden',
-          margin: 50,
-          border: '10px solid #CDCDCD',
-        }}>
-
-          <Container style={{ paddingTop: 100 }}>
-            <div className="title-brand">
-              <h1 className="presentation-title2">Vijesti iz dijaspore</h1>
-            </div>
-            <Row>
-            </Row>
-          </Container>
-        </div>
-      </div>
-      <DemoFooter />
-    </>
+          </Row>
+        </Container>
+      </div>       
+    </div>
+    <MainCard  filteredData={filteredData}/>
+  </>
   );
 }
 

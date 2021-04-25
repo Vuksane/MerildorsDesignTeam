@@ -1,90 +1,25 @@
-/*!
-
-=========================================================
-* Paper Kit React - v1.0.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/paper-kit-react
-
-* Copyright 2019 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/paper-kit-react/blob/master/LICENSE.md)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 import React from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter, Route, Redirect, Switch } from "react-router-dom";
+import App from "./App";
 import "react-image-gallery/styles/css/image-gallery.css";
-// styles
 import "assets/css/bootstrap.min.css";
 import "assets/scss/paper-kit.scss";
+import { transitions, positions, Provider as AlertProvider } from "react-alert";
+import AlertTemplate from "react-alert-template-basic";
 
-// pages
-
-import LandingPage from "views/examples/LandingPage.js";
-import KulturaIDrustvo from './views/examples/vesti/KulturaIDrustvo';
-import Ekonomija from './views/examples/vesti/Ekonomija'
-import KolumneIIntervjui from './views/examples/vesti/KolumneIIntervjui'
-import VijestiIzDijaspore from './views/examples/vesti/VijestiIzDijaspore'
-import Politika from './views/examples/vesti/Politika';
-import Vest from './Vest';
-import Adminpanelindex from './views/examples/adminpanel/Adminpanelindex';
-import Other from './Other';
-// others
+const options = {
+  // you can also just use 'bottom center'
+  position: positions.BOTTOM_CENTER,
+  timeout: 5000,
+  offset: "30px",
+  // you can also just use 'scale'
+  transition: transitions.SCALE,
+};
 ReactDOM.render(
-
-  <BrowserRouter>
-    <Switch>
-
-      <Route
-        exact
-        path="/"
-        render={props => <LandingPage {...props} />}
-      />
-      <Route
-        path="/KulturaIDrustvo"
-        render={props => <KulturaIDrustvo {...props} />}
-
-      />
-
-      <Route
-        path="/Politika"
-        render={props => <Politika {...props} />}
-      />
-
-      <Route
-        path="/Ekonomija"
-        render={props => <Ekonomija {...props} />}
-      />
-
-      <Route
-        path="/KolumneIIntervjui"
-        render={props => <KolumneIIntervjui {...props} />}
-      />
-
-      <Route
-        path="/VijestiIzDijaspore"
-        render={props => <VijestiIzDijaspore {...props} />}
-      />
-      <Route
-        path="/Vest"
-        render={props => <Vest {...props} />}
-      />
-      <Route
-        path="/Adminpanelindex"
-        render={props => <Adminpanelindex {...props} />}
-      />
-      <Route
-        path="/Other"
-        render={props => <Other {...props} />}
-      />
-      <Redirect to="/" />
-    </Switch>
-  </BrowserRouter>,
+  <AlertProvider template={AlertTemplate} {...options}>
+    <React.Fragment>
+      <App />
+    </React.Fragment>
+  </AlertProvider>,
   document.getElementById("root")
 );
