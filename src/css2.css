@@ -3,7 +3,7 @@
   text-align: center;
 }
 .lover_left{
-    margin-bottom: 2vh;
+    margin-bottom: 5vh;
     margin-left : 2vw;
     position: fixed;
     bottom: 0;
@@ -41,8 +41,8 @@ pre{
   white-space: -pre-wrap;
   white-space: -o-pre-wrap;
   word-wrap: break-word;
-  font-family: 'Noto Sans JP', sans-serif;
   color: black !important; 
+  font-family: 'Noto Sans JP', sans-serif !important;
 }
 /* Basics */
 html,
@@ -92,7 +92,14 @@ body {
   background-size: cover;
   width: 100%;
 }
-
+#maxHeight2 {
+  background-repeat: no-repeat;
+  background-attachment: apsolute;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  overflow-y: scroll;
+}
 .paddingArticlesCards {
   padding: 50px;
 }
@@ -320,11 +327,12 @@ body {
   color: #61dafb;
 }
 ::-webkit-scrollbar {
-  width: 0px;
+  width: 10px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
+  
   background: #f1f1f1;
 }
 

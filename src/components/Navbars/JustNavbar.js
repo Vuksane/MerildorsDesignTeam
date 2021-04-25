@@ -3,6 +3,7 @@ import { useHistory, Link, useLocation  } from "react-router-dom";
 import classnames from "classnames";
 import { Collapse, NavbarBrand, Navbar, NavItem, NavLink, Nav, Container } from "reactstrap";
 
+
 const JustNavbar = () => {
     let location = useLocation();
 
@@ -42,8 +43,14 @@ const JustNavbar = () => {
     if (location.pathname.match(/Adminpanelindex/)){
         return null;
     }
-    else if (location.pathname.match(/Adminpanellogin/)){
+    else if (location.pathname.match(/adminpanelindex/)){
         return null;
+    }
+    else if (location.pathname.match(/Adminpanellogin/)){
+      return null;
+    }
+    else if (location.pathname.match(/adminpanellogin/)){
+      return null;
     }
     return (
         <Navbar

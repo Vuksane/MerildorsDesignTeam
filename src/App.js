@@ -5,6 +5,7 @@ import { Form, Input } from "reactstrap";
 import Label from "reactstrap/lib/Label";
 import credentials from "./secretData/credentials.json"
 import { Route, Redirect, Switch, Link, useHistory, useLocation, BrowserRouter } from "react-router-dom";
+import { HashRouter } from "react-router-dom";
 import "assets/css/bootstrap.min.css";
 import "assets/scss/paper-kit.scss";
 //Services

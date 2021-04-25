@@ -46,7 +46,11 @@ function DemoFooter() {
               </li>
             </ul>
           </nav>
-
+          <div className="credits ml-auto">
+            <span className="mail" style={{ fontSize: 15, fontWeight: 400 }}>
+              Pisite nam na: domovinadijaspora4d@gmail.com
+            </span>
+          </div>
           <section></section>
           <div className="credits ml-auto">
             <span className="copyright">

@@ -27,6 +27,21 @@ function AuthButton() {
         </div>
       );
     }
+    else if(location.pathname.match(/adminpanelindex/)){
+      return auth.user ? (
+        <div className="lover_left">
+          <p>
+            <Button onClick={()=>handleLogout()}>Sign out</Button>
+          </p>
+        </div>
+      ) : (
+        <div className="lover_left">
+          <p>
+            <Button onClick={()=>handleLogout()}>Sign out</Button>
+          </p>
+        </div>
+      );
+    }
     else return null;
 }
 export default AuthButton;

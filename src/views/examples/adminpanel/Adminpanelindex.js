@@ -18,6 +18,8 @@ import { deleteComment } from "../../../services/API";
 //Stranice Admin panela
 import AdminpanelindexListaTema from "./AdminpanelindexListaTema";
 import AdminpanelindexListaNaslova from "./AdminpanelindexListaNaslova";
+import 'react-perfect-scrollbar/dist/css/styles.css';
+import PerfectScrollbar from 'react-perfect-scrollbar';
 
 function Adminpanelindex() {
   function callback(e) {
@@ -202,7 +204,8 @@ function Adminpanelindex() {
     <>
       <Tabs defaultActiveKey="1" onChange={callback} tabPosition="left">
         <TabPane tab="Nova Vest" key="1">
-          <div className="section section-dark text-center" id="maxHeight" style={{ height: "100vh", backgroundColor: "grey" }}>
+        <PerfectScrollbar>
+          <div className="section section-dark text-center" id="maxHeight2" style={{ height: "100vh", backgroundColor: "grey"}}>
             <Container>
               <Row>
                 <Col className="ml-auto mr-auto" md="12">
@@ -278,6 +281,7 @@ function Adminpanelindex() {
               </Row>
             </Container>
           </div>
+          </PerfectScrollbar>                 
         </TabPane>
         <TabPane tab="Lista Vesti" key="2">
           <MDBTable 

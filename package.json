@@ -22,9 +22,11 @@
     "react-dom": "16.8.6",
     "react-image-gallery": "^0.9.1",
     "react-particles-js": "^2.7.1",
+    "react-perfect-scrollbar": "^1.5.8",
     "react-router": "5.2.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.0.1",
+    "react-scrollbar-js": "^1.0.1",
     "react-table": "^7.6.3",
     "reactstrap": "8.0.0"
   },
