@@ -14,7 +14,7 @@ function DemoFooter() {
   else if (location.pathname.match(/Adminpanellogin/)){
     return null;
   }
-  else if (location.pathname.match(/adminanellogin/)){
+  else if (location.pathname.match(/adminpanellogin/)){
     return null;
   }
   return (
